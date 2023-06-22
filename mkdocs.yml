@@ -6,3 +6,5 @@ nav:
     - 'Introduction': 'index.md'
 theme: readthedocs
 strict: true
+- name: Deploy MkDocs
+  uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
