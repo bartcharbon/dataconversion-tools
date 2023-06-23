@@ -1,8 +1,0 @@
-site_name: TEST
-site_url: https://bartcharbon.github.io/dataconversion-tools/
-repo_url: https://github.com/bartcharbon/dataconversion-tools/
-nav:
-  - 'Home':
-    - 'Introduction': 'index.md'
-theme: readthedocs
-strict: true
