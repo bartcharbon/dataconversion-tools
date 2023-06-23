@@ -4,32 +4,32 @@ site_url: https://github.com/bartcharbon/dataconversion-tools/
 repo_url: https://github.com/bartcharbon/dataconversion-tools/
 nav:
   - 'Home':
-    - 'Introduction': 'docs/index.md'
-    - 'Key features': 'docs/home/key_features.md'
+    - 'Introduction': 'index.md'
+    - 'Key features': 'home/key_features.md'
   - 'Get Started':
-    - 'Requirements': 'docs/get_started/requirements.md'
-    - 'Installation': 'docs/get_started/installation.md'
-    - 'Start running': 'docs/get_started/start_running.md'
+    - 'Requirements': 'get_started/requirements.md'
+    - 'Installation': 'get_started/installation.md'
+    - 'Start running': 'get_started/start_running.md'
   - 'Usage':
-      - 'Command-line options': 'docs/usage/command-line-options.md'
-      - 'Workflow': 'docs/usage/workflow.md'
-      - 'Input': 'docs/usage/input.md'
-      - 'Output': 'docs/usage/output.md'
-      - 'Config': 'docs/usage/config.md'
+      - 'Command-line options': 'usage/command-line-options.md'
+      - 'Workflow': 'usage/workflow.md'
+      - 'Input': 'usage/input.md'
+      - 'Output': 'usage/output.md'
+      - 'Config': 'usage/config.md'
   - 'Examples':
-      - 'Nanopore': 'docs/examples/nanopore.md'
-      - 'Multi-project': 'docs/examples/multi-project.md'
-      - 'Reanalysis': 'docs/examples/reanalysis.md'
+      - 'Nanopore': 'examples/nanopore.md'
+      - 'Multi-project': 'examples/multi-project.md'
+      - 'Reanalysis': 'examples/reanalysis.md'
   - 'Advanced':
-      - 'Annotationss': 'docs/advanced/annotations.md'
-      - 'Classification trees': 'docs/advanced/classification_trees.md'
-      - 'Report templates': 'docs/advanced/report_templates.md'
+      - 'Annotationss': 'advanced/annotations.md'
+      - 'Classification trees': 'advanced/classification_trees.md'
+      - 'Report templates': 'advanced/report_templates.md'
   - 'Help':
-       - 'Issues': 'docs/help/issues.md'
-       - 'Frequently asked questions': 'docs/help/frequently_asked_questions.md'
+       - 'Issues': 'help/issues.md'
+       - 'Frequently asked questions': 'help/frequently_asked_questions.md'
   - 'About':
-    - 'License': 'docs/about/license.md'
-    - 'Acknowledgements': 'docs/about/acknowledgements.md'
+    - 'License': 'about/license.md'
+    - 'Acknowledgements': 'about/acknowledgements.md'
 markdown_extensions:
   - admonition
   - toc:
