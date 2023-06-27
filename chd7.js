@@ -5,7 +5,7 @@ function count(url, id){
     xhr.onload = function() {
       var status = xhr.status;
       if (status == 200) {
-        setResult(xhr.response.total, id);
+        setResult(xhr.respnse.total, id);
       } 
     };
     xhr.send();
