@@ -1,4 +1,4 @@
-# Variant Interpretation Pipeline (VIP)
+# Variant Interpretation Pipeline (VIPPPPPPP
 VIP is a flexible human variant interpretation pipeline for rare disease using state-of-the-art pathogenicity prediction ([CAPICE](https://github.com/molgenis/capice)) and template-based interactive reporting to facilitate decision support.
 
 The VIP pipeline can be used starting from either your `fastq`, `bam/cram` or `.g.vcf/vcf` data,
