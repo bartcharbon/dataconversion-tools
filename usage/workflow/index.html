@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="VIP is a flexible human variant interpretation pipeline for rare disease using state-of-the-art pathogenicity prediction (CAPICE) and template-based interactive reporting to facilitate decision support." name="description"/>
+<link href="https://github.com/bartcharbon/dataconversion-tools/usage/workflow/" rel="canonical"/>
+<link href="../command-line-options/" rel="prev"/>
+<link href="../input/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
+<title>Workflow - Doc test final 2</title>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../custom.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="" data-md-color-primary="" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#workflow">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Doc test final 2" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Doc test final 2">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Doc test final 2
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Workflow
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/bartcharbon/dataconversion-tools/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Doc test final 2" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Doc test final 2">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Doc test final 2
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/bartcharbon/dataconversion-tools/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_1" tabindex="0">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Introduction
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../home/key_features/">
+        Key features
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_2" tabindex="0">
+          Get Started
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Get Started" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Get Started
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../get_started/requirements/">
+        Requirements
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../get_started/installation/">
+        Installation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../get_started/start_running/">
+        Start running
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label aria-expanded="true" class="md-nav__link" for="__nav_3" tabindex="0">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Usage" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-options/">
+        Command-line options
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Workflow
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Workflow
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fastq">
+    FASTQ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cram">
+    CRAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vcf">
+    VCF
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../input/">
+        Input
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../output/">
+        Output
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config/">
+        Config
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_4" tabindex="0">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Examples" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../examples/nanopore/">
+        Nanopore
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../examples/multi-project/">
+        Multi-project
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../examples/reanalysis/">
+        Reanalysis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_5" tabindex="0">
+          Advanced
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Advanced" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Advanced
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../advanced/annotations/">
+        Annotationss
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../advanced/classification_trees/">
+        Classification trees
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../advanced/report_templates/">
+        Report templates
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_6" tabindex="0">
+          Help
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Help" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Help
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../help/issues/">
+        Issues
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../help/frequently_asked_questions/">
+        Frequently asked questions
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label aria-expanded="false" class="md-nav__link" for="__nav_7" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="About" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/license/">
+        License
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/acknowledgements/">
+        Acknowledgements
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fastq">
+    FASTQ
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cram">
+    CRAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vcf">
+    VCF
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">¶</a></h1>
+<p>VIP consists of three workflows depending on the type of input data: fastq, bam/cram or (g)vcf.
+The <code>fastq</code> workflow is an extension of the <code>cram</code> workflow. The <code>cram</code> workflow is an extension of the <code>vcf</code> workflow.
+The <code>vcf</code> workflow produces the pipeline outputs as described <a href="../output/">here</a>.
+The following sections provide an overview of the steps of each of these workflows. </p>
+<div class="mermaid">flowchart TD
+    p0((Channel.from))
+    p1([map])
+    p2([map])
+    p3([branch])
+    p4[minimap2_index]
+    p5([map])
+    p6([mix])
+    p7([branch])
+    p8([branch])
+    p9([map])
+    p10[fastq:concat_fastq_paired_end]
+    p11([map])
+    p12([mix])
+    p13([map])
+    p14[fastq:minimap2_align_paired_end]
+    p15([map])
+    p16([branch])
+    p17([map])
+    p18[fastq:concat_fastq]
+    p19([map])
+    p20([mix])
+    p21([map])
+    p22[fastq:minimap2_align]
+    p23([map])
+    p24([mix])
+    p25([branch])
+    p26([map])
+    p27[fastq:cram:samtools_index]
+    p28([map])
+    p29([mix])
+    p30([flatMap])
+    p31([multiMap])
+    p32([map])
+    p33[fastq:cram:clair3_call]
+    p34([map])
+    p35([multiMap])
+    p36([map])
+    p37([groupTuple])
+    p38([map])
+    p39[fastq:cram:merge_gvcf]
+    p40([map])
+    p41([map])
+    p42([groupTuple])
+    p43([map])
+    p44[fastq:cram:clair3_call_publish]
+    p45(( ))
+    p46([branch])
+    p47([map])
+    p48[fastq:cram:samtools_addreplacerg]
+    p49([map])
+    p50([groupTuple])
+    p51([map])
+    p52[fastq:cram:manta_call]
+    p53([map])
+    p54([multiMap])
+    p55([map])
+    p56([groupTuple])
+    p57([map])
+    p58[fastq:cram:manta_call_publish]
+    p59(( ))
+    p60([map])
+    p61[fastq:cram:sniffles2_call]
+    p62([map])
+    p63([groupTuple])
+    p64([map])
+    p65[fastq:cram:sniffles2_combined_call]
+    p66([map])
+    p67([multiMap])
+    p68([map])
+    p69([groupTuple])
+    p70([map])
+    p71[fastq:cram:sniffles_call_publish]
+    p72(( ))
+    p73([mix])
+    p74([mix])
+    p75([map])
+    p76([groupTuple])
+    p77([map])
+    p78[fastq:cram:concat_vcf]
+    p79([flatMap])
+    p80([map])
+    p81([groupTuple])
+    p82([map])
+    p83([branch])
+    p84([map])
+    p85[fastq:cram:vcf:convert]
+    p86([map])
+    p87([map])
+    p88[fastq:cram:vcf:index]
+    p89([map])
+    p90([map])
+    p91[fastq:cram:vcf:stats]
+    p92([map])
+    p93([mix])
+    p94([flatMap])
+    p95([map])
+    p96([groupTuple])
+    p97([map])
+    p98([branch])
+    p99([map])
+    p100[fastq:cram:vcf:merge_vcf]
+    p101([map])
+    p102([map])
+    p103[fastq:cram:vcf:merge_gvcf]
+    p104([map])
+    p105([map])
+    p106([mix])
+    p107([branch])
+    p108([flatMap])
+    p109([branch])
+    p110([map])
+    p111[fastq:cram:vcf:split]
+    p112([map])
+    p113([mix])
+    p114([map])
+    p115([branch])
+    p116([branch])
+    p117[fastq:cram:vcf:normalize]
+    p118([mix])
+    p119([branch])
+    p120[fastq:cram:vcf:annotate]
+    p121([multiMap])
+    p122([mix])
+    p123([map])
+    p124([groupTuple])
+    p125([map])
+    p126[fastq:cram:vcf:annotate_publish]
+    p127(( ))
+    p128([mix])
+    p129([branch])
+    p130[fastq:cram:vcf:classify]
+    p131([multiMap])
+    p132([mix])
+    p133([map])
+    p134([groupTuple])
+    p135([map])
+    p136[fastq:cram:vcf:classify_publish]
+    p137(( ))
+    p138([mix])
+    p139([branch])
+    p140[fastq:cram:vcf:filter]
+    p141([branch])
+    p142([mix])
+    p143([branch])
+    p144[fastq:cram:vcf:inheritance]
+    p145([mix])
+    p146([branch])
+    p147[fastq:cram:vcf:classify_samples]
+    p148([multiMap])
+    p149([mix])
+    p150([map])
+    p151([groupTuple])
+    p152([map])
+    p153[fastq:cram:vcf:classify_samples_publish]
+    p154(( ))
+    p155([mix])
+    p156([branch])
+    p157[fastq:cram:vcf:filter_samples]
+    p158([branch])
+    p159([mix])
+    p160([map])
+    p161([groupTuple])
+    p162([map])
+    p163([branch])
+    p164[fastq:cram:vcf:concat]
+    p165([map])
+    p166([branch])
+    p167([map])
+    p168([mix])
+    p169([branch])
+    p170([flatMap])
+    p171([map])
+    p172[fastq:cram:vcf:slice]
+    p173([map])
+    p174([map])
+    p175([groupTuple])
+    p176([map])
+    p177([mix])
+    p178([map])
+    p179[fastq:cram:vcf:report]
+    p180(( ))
+    p0 --&gt; p1
+    p1 --&gt; p2
+    p2 --&gt; p3
+    p3 --&gt; p6
+    p3 --&gt; p4
+    p4 --&gt; p5
+    p5 --&gt;|ch_index_indexed| p6
+    p6 --&gt;|meta| p7
+    p7 --&gt; p16
+    p7 --&gt; p8
+    p8 --&gt; p9
+    p8 --&gt; p12
+    p9 --&gt; p10
+    p10 --&gt; p11
+    p11 --&gt;|ch_input_paired_end_merged| p12
+    p12 --&gt; p13
+    p13 --&gt; p14
+    p14 --&gt; p15
+    p15 --&gt;|ch_input_paired_end_aligned| p24
+    p16 --&gt; p20
+    p16 --&gt; p17
+    p17 --&gt; p18
+    p18 --&gt; p19
+    p19 --&gt;|ch_input_single_merged| p20
+    p20 --&gt; p21
+    p21 --&gt; p22
+    p22 --&gt; p23
+    p23 --&gt;|ch_input_single_aligned| p24
+    p24 --&gt;|meta| p25
+    p25 --&gt; p26
+    p25 --&gt; p29
+    p26 --&gt; p27
+    p27 --&gt; p28
+    p28 --&gt;|ch_cram_indexed| p29
+    p29 --&gt; p30
+    p30 --&gt; p31
+    p31 --&gt; p32
+    p31 --&gt; p46
+    p32 --&gt; p33
+    p33 --&gt; p34
+    p34 --&gt; p35
+    p35 --&gt; p41
+    p35 --&gt; p36
+    p36 --&gt; p37
+    p37 --&gt; p38
+    p38 --&gt; p39
+    p39 --&gt; p40
+    p40 --&gt;|ch_vcf_chunked_snvs_merged| p74
+    p41 --&gt; p42
+    p42 --&gt; p43
+    p43 --&gt; p44
+    p44 --&gt; p45
+    p46 --&gt; p60
+    p46 --&gt; p47
+    p47 --&gt; p48
+    p48 --&gt; p49
+    p49 --&gt; p50
+    p50 --&gt; p51
+    p51 --&gt; p52
+    p52 --&gt; p53
+    p53 --&gt; p54
+    p54 --&gt; p73
+    p54 --&gt; p55
+    p55 --&gt; p56
+    p56 --&gt; p57
+    p57 --&gt; p58
+    p58 --&gt; p59
+    p60 --&gt; p61
+    p61 --&gt; p62
+    p62 --&gt; p63
+    p63 --&gt; p64
+    p64 --&gt; p65
+    p65 --&gt; p66
+    p66 --&gt; p67
+    p67 --&gt; p73
+    p67 --&gt; p68
+    p68 --&gt; p69
+    p69 --&gt; p70
+    p70 --&gt; p71
+    p71 --&gt; p72
+    p73 --&gt;|ch_vcf_chunked_svs_done| p74
+    p74 --&gt; p75
+    p75 --&gt; p76
+    p76 --&gt; p77
+    p77 --&gt; p78
+    p78 --&gt; p79
+    p79 --&gt;|meta| p80
+    p80 --&gt; p81
+    p81 --&gt; p82
+    p82 --&gt; p83
+    p83 --&gt; p90
+    p83 --&gt; p93
+    p83 --&gt; p87
+    p83 --&gt; p84
+    p84 --&gt; p85
+    p85 --&gt; p86
+    p86 --&gt;|ch_vcfs_converted| p93
+    p87 --&gt; p88
+    p88 --&gt; p89
+    p89 --&gt;|ch_vcfs_indexed| p93
+    p90 --&gt; p91
+    p91 --&gt; p92
+    p92 --&gt;|ch_vcfs_statsed| p93
+    p93 --&gt; p94
+    p94 --&gt;|ch_vcfs_preprocessed| p95
+    p95 --&gt; p96
+    p96 --&gt; p97
+    p97 --&gt; p98
+    p98 --&gt; p99
+    p98 --&gt; p102
+    p98 --&gt; p105
+    p99 --&gt; p100
+    p100 --&gt; p101
+    p101 --&gt;|ch_project_vcfs_merged_vcfs| p106
+    p102 --&gt; p103
+    p103 --&gt; p104
+    p104 --&gt;|ch_project_vcfs_merged_gvcfs| p106
+    p105 --&gt; p106
+    p106 --&gt;|ch_project_vcfs_merged| p107
+    p107 --&gt; p113
+    p107 --&gt; p108
+    p108 --&gt; p109
+    p109 --&gt; p113
+    p109 --&gt; p110
+    p110 --&gt; p111
+    p111 --&gt; p112
+    p112 --&gt;|ch_inputs_splitted| p113
+    p113 --&gt;|ch_inputs_scattered| p114
+    p114 --&gt; p115
+    p115 --&gt; p116
+    p115 --&gt; p122
+    p116 --&gt; p117
+    p116 --&gt; p118
+    p117 --&gt; p118
+    p118 --&gt; p119
+    p119 --&gt; p128
+    p119 --&gt; p120
+    p120 --&gt; p121
+    p121 --&gt; p128
+    p121 --&gt; p122
+    p122 --&gt; p123
+    p123 --&gt; p124
+    p124 --&gt; p125
+    p125 --&gt; p126
+    p126 --&gt; p127
+    p128 --&gt; p129
+    p129 --&gt; p138
+    p129 --&gt; p130
+    p130 --&gt; p131
+    p131 --&gt; p138
+    p131 --&gt; p132
+    p115 --&gt; p132
+    p132 --&gt; p133
+    p133 --&gt; p134
+    p134 --&gt; p135
+    p135 --&gt; p136
+    p136 --&gt; p137
+    p138 --&gt; p139
+    p139 --&gt; p140
+    p139 --&gt; p142
+    p140 --&gt; p141
+    p141 --&gt; p142
+    p141 --&gt; p149
+    p142 --&gt; p143
+    p143 --&gt; p145
+    p143 --&gt; p144
+    p144 --&gt; p145
+    p145 --&gt; p146
+    p146 --&gt; p147
+    p146 --&gt; p155
+    p147 --&gt; p148
+    p148 --&gt; p149
+    p148 --&gt; p155
+    p115 --&gt; p149
+    p149 --&gt; p150
+    p150 --&gt; p151
+    p151 --&gt; p152
+    p152 --&gt; p153
+    p153 --&gt; p154
+    p155 --&gt; p156
+    p156 --&gt; p159
+    p156 --&gt; p157
+    p157 --&gt; p158
+    p158 --&gt; p159
+    p158 --&gt; p159
+    p115 --&gt; p159
+    p141 --&gt; p159
+    p159 --&gt; p160
+    p160 --&gt; p161
+    p161 --&gt; p162
+    p162 --&gt; p163
+    p163 --&gt; p164
+    p163 --&gt; p167
+    p164 --&gt; p165
+    p165 --&gt; p166
+    p166 --&gt; p168
+    p166 --&gt; p168
+    p167 --&gt;|ch_output_singleton| p168
+    p168 --&gt; p169
+    p169 --&gt; p170
+    p169 --&gt; p177
+    p170 --&gt; p171
+    p171 --&gt; p172
+    p172 --&gt; p173
+    p173 --&gt; p174
+    p174 --&gt; p175
+    p175 --&gt; p176
+    p176 --&gt;|ch_sliced| p177
+    p177 --&gt; p178
+    p178 --&gt; p179
+    p179 --&gt; p180
+</div>
+<p><em>Above: Nextflow rendering of the <code>fastq</code> workflow</em></p>
+<h2 id="fastq">FASTQ<a class="headerlink" href="#fastq" title="Permanent link">¶</a></h2>
+<p>The <code>fastq</code> workflow consists of the following steps:</p>
+<ol>
+<li>Parallelize sample sheet per sample and for each sample</li>
+<li>Discover fastq index files and create missing indices</li>
+<li>In case of multiple fastq files per sample, concatenate the files</li>
+<li>Alignment using <a href="https://github.com/lh3/minimap2">minimap2</a> producing a <code>cram</code> file per sample</li>
+<li>Continue with step 2. of the <code>cram</code> workflow</li>
+</ol>
+<p>For details, see <a href="https://github.com/molgenis/vip/blob/main/vip_fastq.nf">here</a>.</p>
+<h2 id="cram">CRAM<a class="headerlink" href="#cram" title="Permanent link">¶</a></h2>
+<p>The <code>cram</code> workflow consists of the following steps:</p>
+<ol>
+<li>Parallelize sample sheet per sample and for each sample</li>
+<li>Discover cram index files and create missing indices</li>
+<li>Parallelize cram in chunks consisting of one or more contigs and for each chunk<ol>
+<li>Perform short variant calling with <a href="https://github.com/HKU-BAL/Clair3">Clair3</a> producing a <code>gvcf</code> file per chunk per sample, the gvcfs of the samples in a project are than merged to one vcf per project (using <a href="https://github.com/dnanexus-rnd/GLnexus">GLnexus</a>.</li>
+<li>Perform structural variant calling with <a href="https://github.com/Illumina/manta">Manta</a> or <a href="https://github.com/fritzsedlazeck/Sniffles">Sniffles2</a> producing a <code>vcf</code> file per chunk per project.</li>
+</ol>
+</li>
+<li>Concatenate short variant calling and structural variant calling <code>vcf</code> files per chunk per sample</li>
+<li>Continue with step 3. of the <code>vcf</code> workflow</li>
+</ol>
+<p>Known limitation: Clair3 is not calling the small variants on the Mitochondia.</p>
+<p>For details, see <a href="https://github.com/molgenis/vip/blob/main/vip_cram.nf">here</a>.</p>
+<h2 id="vcf">VCF<a class="headerlink" href="#vcf" title="Permanent link">¶</a></h2>
+<p>The <code>vcf</code> workflow consists of the following steps:</p>
+<ol>
+<li>Parallelize sample sheet per sample and for each sample</li>
+<li>Discover cram index files and create missing indices</li>
+<li>Merge <code>vcf</code> files (using <a href="https://github.com/dnanexus-rnd/GLnexus">GLnexus</a> in case of .g.vcf files) resulting in one <code>vcf</code> (per chunk) per project</li>
+<li>If the data is not chunked: parallelize <code>vcf</code> files in chunks consisting of one or more contigs and for each chunk and for each chunk<ol>
+<li>Normalize</li>
+<li>Annotate</li>
+<li>Classify</li>
+<li>Filter</li>
+<li>Perform inheritance matching</li>
+<li>Classify in the context of samples</li>
+<li>Filter in the context of samples</li>
+</ol>
+</li>
+<li>Concatenate chunks resulting in one vcf file per project</li>
+<li>If <code>cram</code> data is available slice the <code>cram</code> files to only keep relevant reads</li>
+<li>Create report</li>
+</ol>
+<p>For details, see <a href="https://github.com/molgenis/vip/blob/main/vip_vcf.nf">here</a>.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023 University Medical Center Groningen All rights reserved
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+<script src="../../js/mermaid.min.js"></script>
+<script src="../../search/main.js"></script>
+<script>mermaid.initialize({});</script></body>
+</html>
